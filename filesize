@@ -1,0 +1,10 @@
+#some simple code to display a file size from most operating systems
+(
+  du --apparent-size --block-size=1 "hw.txt" 2>/dev/null ||
+  gdu --apparent-size --block-size=1 "hw.txt" 2>/dev/null ||
+  find "hw.txt" -printf "%s" 2>/dev/null ||
+  gfind "hw.txt" -printf "%s" 2>/dev/null ||
+  stat --printf="%s" "hw.txt" 2>/dev/null ||
+  stat -f%z "hw.txt" 2>/dev/null ||
+  wc -c <"hw.txt" 2>/dev/null
+) | awk '{print $1}'
