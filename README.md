@@ -5,7 +5,7 @@ Running the code.
 ####################
 
 1. Copy all .sh files into the same directory
-2. Run file.sh, the GUI will no load
+2. Run filet.sh, the GUI will no load
 
 Using the program.
 ###################
